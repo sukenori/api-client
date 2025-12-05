@@ -588,10 +588,10 @@ class AtCoderProblemData(ProblemData):
 
         memory_limit_value = parsed_memory_limit.group(2)
         memory_limit_unit = parsed_memory_limit.group(3)
-        if memory_limit_unit == 'KB':
-            memory_limit_byte = int(float(memory_limit_value) * 1000)
-        elif memory_limit_unit == 'MB':
-            memory_limit_byte = int(float(memory_limit_value) * 1000 * 1000)
+        if memory_limit_unit == 'KiB':
+            memory_limit_byte = int(float(memory_limit_value) * 1024)
+        elif memory_limit_unit == 'MiB':
+            memory_limit_byte = int(float(memory_limit_value) * 1024 * 1024)
         else:
             assert False
 
